@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/matve/CLionProjects/Calculator/functions.h
+complex.h
+-
+string.h
+-
+stdlib.h
+-
+math.h
+-
+stdio.h
+-
+
+C:/Users/matve/CLionProjects/Calculator/main.c
+functions.h
+C:/Users/matve/CLionProjects/Calculator/functions.h
+parsing.h
+C:/Users/matve/CLionProjects/Calculator/parsing.h
+
+C:/Users/matve/CLionProjects/Calculator/parsing.h
+complex.h
+-
+string.h
+-
+stdlib.h
+-
+functions.h
+C:/Users/matve/CLionProjects/Calculator/functions.h
+

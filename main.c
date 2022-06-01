@@ -9,7 +9,7 @@ int main() {
     while (fgets(buff, INPUT_BUFFER_SIZE, input) != NULL) {
         eraseReductant(buff);
         stack *postfix = initStack();
-        size_t token_cnt = 0;
+        unsigned int token_cnt = 0;
         char **tokens = splitTokens(buff, &token_cnt);
         buildStack(tokens, token_cnt, postfix);
         memset(buff, 0, sizeof(buff));
@@ -17,7 +17,6 @@ int main() {
         ++rows;
         free(tokens);
     }
-
     char* variables[STACK_BUFFER_SIZE];
     double complex var_values[STACK_BUFFER_SIZE];
     int var_counter = 0;
