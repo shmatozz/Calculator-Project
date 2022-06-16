@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "functions.h"
 
-void buildStack(char **tokens, int token_cnt, stack *st);
+char **splitTokens(char *infix, size_t *token_cnt);
 double complex evaluate(stack *input, char** variables, double complex *var_values, int *var_counter);
 
 

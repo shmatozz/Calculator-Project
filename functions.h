@@ -28,7 +28,7 @@ double complex my_clog(double complex base, double complex num);
 void eraseReductant(char *str);
 stack *initStack();
 void freeStack(stack *st);
-char **splitTokens(char *infix, size_t *token_cnt);
+void buildStack(char **tokens, int token_cnt, stack *st);
 
 static double complex (*simple_function_ptrs[])(double complex) = {
         ccos,

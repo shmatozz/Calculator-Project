@@ -27,7 +27,7 @@ int main() {
             if(fabs(cimag(res)) < 1e-7) {
                 printf("RESULT IS: %f", creal(res));
             } else if(cimag(res) > 0) {
-                printf("RESULT IS: %f+%fi ", creal(res), cimag(res));
+                printf("RESULT IS: %f + %fi ", creal(res), cimag(res));
             } else {
                 printf("RESULT IS: %f%fi ", creal(res), cimag(res));
             }
