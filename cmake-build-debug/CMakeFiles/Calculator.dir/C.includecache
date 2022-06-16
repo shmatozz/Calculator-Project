@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/matve/CLionProjects/Calculator/functions.c
-functions.h
-C:/Users/matve/CLionProjects/Calculator/functions.h
-
 C:/Users/matve/CLionProjects/Calculator/functions.h
 complex.h
 -
@@ -21,12 +17,6 @@ math.h
 -
 stdio.h
 -
-
-C:/Users/matve/CLionProjects/Calculator/main.c
-functions.h
-C:/Users/matve/CLionProjects/Calculator/functions.h
-parsing.h
-C:/Users/matve/CLionProjects/Calculator/parsing.h
 
 C:/Users/matve/CLionProjects/Calculator/parsing.c
 parsing.h

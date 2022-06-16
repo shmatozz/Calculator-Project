@@ -1,7 +1,7 @@
 #include "parsing.h"
 
-char **splitTokens(char *infix, size_t *token_cnt) {
-    size_t string_size = strlen(infix);
+char **splitTokens(char *infix, unsigned int *token_cnt) {
+    unsigned int string_size = strlen(infix);
     char **tokens = malloc(sizeof(char *) * string_size);
     memset(tokens, 0, sizeof(char *) * string_size);
     int last_operand = -1;
@@ -42,11 +42,13 @@ double complex evaluate(stack *input, char** variables, double complex *var_valu
     char* var_name = NULL;
     for (int i = 0; i < input->ptr; ++i) {
         switch (input->buf[i].type) {
-            case 1:
+            case 1:     // число
+                //printf("case 1 %f\n", input->buf[i].num);
                 nums[num_ptr] = input->buf[i].num;
                 num_ptr++;
                 break;
-            case 2:
+            case 2:     // переменная
+                //printf("case 2 %s\n", input->buf[i].str);
                 found = 0;
                 for (int j = 0; j < *var_counter; ++j) {
                     if (strcmp(input->buf[i].str, variables[j]) == 0) {
@@ -65,7 +67,8 @@ double complex evaluate(stack *input, char** variables, double complex *var_valu
                     }
                 }
                 break;
-            case 0:
+            case 0:     // функция
+                //printf("case 0 %s\n", input->buf[i].str);
                 complex_func = 1;
                 for (int j = 0; j < simple_function_cnt; ++j) {
                     if (strcmp(input->buf[i].str, simple_functions[j]) == 0) {
@@ -105,8 +108,9 @@ double complex evaluate(stack *input, char** variables, double complex *var_valu
                     ++num_ptr;
                 }
                 break;
-            case 3:
-                if(input->buf[i].str[0] == '=') {
+            case 3:     // операнд
+                //printf("case 3 %s\n", input->buf[i].str);
+                if (input->buf[i].str[0] == '=') {
                     if(num_ptr != 1) {
                         printf("We've done something strange. Check your expression again pls");
                         exit(1);
@@ -150,7 +154,8 @@ double complex evaluate(stack *input, char** variables, double complex *var_valu
                 nums[num_ptr] = result;
                 ++num_ptr;
                 break;
-            case 4:
+            case 4:     // унарные +-
+                //printf("case 4 %s\n", input->buf[i].str);
                 if(num_ptr < 1) {
                     printf("Not enough arguments for function %s", input->buf[i].str);
                     exit(1);
