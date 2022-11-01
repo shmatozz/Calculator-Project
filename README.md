@@ -25,21 +25,21 @@ There are variables and functions in the expression, the value of variables can 
 The value of variables can be a complex number.
 
 **constants:**
-PI
-e
-j - мнимая единица
+PI,
+e,
+j - мнимая единица.
 
 **Functions:**
-cos
-sin
-tg
-log
-ln
-sqrt
-pow
-abs
-exp
-real
-imag
-mag
-phase
+cos,
+sin,
+tg,
+log,
+ln,
+sqrt,
+pow,
+abs,
+exp,
+real,
+imag,
+mag,
+phase.
