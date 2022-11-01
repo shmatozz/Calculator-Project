@@ -2,21 +2,23 @@
 It is a Calculator on C.
 This calculator can solve expressions like:
 
-exp(-j*PI*alpha*len/v0)         // expression
+exp(-j * PI * alpha * len/v0)         // expression
 
-alpha = sqrt(PI*len/(s1+s2))    // variables 
+// variables
 
-s1 = cos(real(S11)*real(S22))   -
+alpha = sqrt(PI * len/(s1+s2))     
 
-s2 = (sin(imag(S11*S22)))^2     -
+s1 = cos(real(S11) * real(S22))   
 
-len = 191.76                    -
+s2 = (sin(imag(S11 * S22)))^2     
 
-v0 = 299.799                    -
+len = 191.76                    
 
-S11 = -0.01-0.92j               -
+v0 = 299.799                    
 
-S22 = 0.0001+0.997j             -
+S11 = -0.01-0.92j               
+
+S22 = 0.0001+0.997j             
 
 The calculator supports expressions with brackets, 6 arithmetic operations. 
 There are variables and functions in the expression, the value of variables can be set as another expression.
